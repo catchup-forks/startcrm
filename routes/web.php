@@ -11,70 +11,55 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin.home');
+Auth::routes();
+Route::post('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
+
+// temp route to display theme pages, remember to delete before going live
+Route::get('/temp', function () {
+    return view('form');
 });
 
-Route::get('/admin', function () {
-    return view('admin.home');
+Route::get('/', 'HomeController@index');
+Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('/support', ['as' => 'support', 'uses' => 'HomeController@support']);
+
+Route::group(['prefix' => 'user'], function () {
+    Route::get('/profile', ['as' => 'user.profile', 'uses' => 'UserController@profile']);
+    Route::get('/settings', ['as' => 'user.settings', 'uses' => 'UserController@settings']);
+    Route::post('/changepass', ['as' => 'user.changepass', 'uses' => 'UserController@changePassword']);
+    Route::post('/editprofile', ['as' => 'user.editprofile', 'uses' => 'UserController@editProfile']);
 });
 
-Route::get('/login', function () {
-    return view('admin.auth.login');
+Route::group(['prefix' => 'course'], function () {
+    Route::get('/assigned', ['as' => 'course.assigned', 'uses' => 'CourseController@assigned']);
+    Route::get('/non-assigned', ['as' => 'course.non-assigned', 'uses' => 'CourseController@nonassigned']);
 });
 
-Route::get('/charts', function () {
-    return View::make('admin.charts');
+Route::group(['prefix' => 'event'], function () {
+    Route::get('/journey', ['as' => 'event.journey', 'uses' => 'EventController@journey']);
 });
 
-Route::get('/tables', function () {
-    return View::make('admin.table');
+Route::group(['prefix' => 'project'], function () {
+    Route::get('/index', ['as' => 'project.index', 'uses' => 'ProjectController@index']);
 });
 
-Route::get('/forms', function () {
-    return View::make('admin.form');
-});
+// admin routes
+Route::group(['prefix' => 'admin'], function () {
+    // annoucement routes
+    Route::group(['prefix' => 'annoucement'], function () {
+        Route::get('/', ['as' => 'admin.annoucement', 'uses' => 'AnnoucementController@index']);
+        Route::post('/create', ['as' => 'admin.annoucement.create', 'uses' => 'AnnoucementController@create']);
+    });
 
-Route::get('/grid', function () {
-    return View::make('admin.grid');
-});
+    // user routes
+    Route::group(['prefix' => 'users'], function () {
+        Route::get('/', ['as' => 'admin.users', 'uses' => 'ManageUsersController@index']);
+        Route::get('/adduser', ['as' => 'admin.users.adduser', 'uses' => 'ManageUsersController@adduser']);
+        Route::post('/create', ['as' => 'admin.users.create', 'uses' => 'ManageUsersController@create']);
+    });
 
-Route::get('/buttons', function () {
-    return View::make('admin.buttons');
-});
-
-Route::get('/icons', function () {
-    return View::make('admin.icons');
-});
-
-Route::get('/panels', function () {
-    return View::make('admin.panel');
-});
-
-Route::get('/typography', function () {
-    return View::make('admin.typography');
-});
-
-Route::get('/notifications', function () {
-    return View::make('admin.notifications');
-});
-
-Route::get('/blank', function () {
-    return View::make('admin.blank');
-});
-
-Route::get('/documentation', function () {
-    return View::make('admin.documentation');
-});
-
-Route::get('/stats', function() {
-   return View::make('admin.stats');
-});
-
-Route::get('/progressbars', function() {
-    return View::make('admin.progressbars');
-});
-
-Route::get('/collapse', function() {
-    return View::make('admin.collapse');
+    Route::get('/awards', ['as' => 'admin.awards', 'uses' => 'AdminViewController@awards']);
+    Route::get('/committees', ['as' => 'admin.committees', 'uses' => 'AdminViewController@committees']);
+    Route::get('/courses', ['as' => 'admin.courses', 'uses' => 'AdminViewController@courses']);
+    Route::get('/projects', ['as' => 'admin.projects', 'uses' => 'AdminViewController@projects']);
 });

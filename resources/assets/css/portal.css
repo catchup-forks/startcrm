@@ -1,0 +1,16 @@
+.error-message {
+    font-size: 85%;
+    font-style: italic;
+    color: #ff3b38;
+    padding-left: 5px;
+}
+
+.portal-header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.image-border {
+    border-width: 4px;
+    border-style: ridge;
+}
