@@ -22,12 +22,12 @@ class CourseController extends Controller
         $courses = Auth::user()->courses;
         $courses = $courses->where('rank_id', '<=' ,Auth::user()->profile->rank_id)->where('course_type_id', 1);
         dd($courses);
-        return view('portal.course.assigned');
+        return view('course.assigned');
     }
 
     public function nonassigned()
     {
-        return view('portal.course.non-assigned');
+        return view('course.non-assigned');
     }
 
 }

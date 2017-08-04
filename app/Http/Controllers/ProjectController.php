@@ -16,10 +16,10 @@ class ProjectController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
-        return view('portal.project.index');
+        return view('project.index');
     }
-    
+
 }

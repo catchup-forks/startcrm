@@ -44,22 +44,22 @@ Route::group(['prefix' => 'project'], function () {
 });
 
 // admin routes
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'manage'], function () {
     // annoucement routes
     Route::group(['prefix' => 'annoucement'], function () {
-        Route::get('/', ['as' => 'admin.annoucement', 'uses' => 'AnnoucementController@index']);
-        Route::post('/create', ['as' => 'admin.annoucement.create', 'uses' => 'AnnoucementController@create']);
+        Route::get('/', ['as' => 'manage.annoucement', 'uses' => 'AnnoucementController@index']);
+        Route::post('/create', ['as' => 'manage.annoucement.create', 'uses' => 'AnnoucementController@create']);
     });
 
     // user routes
     Route::group(['prefix' => 'users'], function () {
-        Route::get('/', ['as' => 'admin.users', 'uses' => 'ManageUsersController@index']);
-        Route::get('/adduser', ['as' => 'admin.users.adduser', 'uses' => 'ManageUsersController@adduser']);
-        Route::post('/create', ['as' => 'admin.users.create', 'uses' => 'ManageUsersController@create']);
+        Route::get('/', ['as' => 'manage.users', 'uses' => 'ManageUsersController@index']);
+        Route::get('/adduser', ['as' => 'manage.users.adduser', 'uses' => 'ManageUsersController@adduser']);
+        Route::post('/create', ['as' => 'manage.users.create', 'uses' => 'ManageUsersController@create']);
     });
 
-    Route::get('/awards', ['as' => 'admin.awards', 'uses' => 'AdminViewController@awards']);
-    Route::get('/committees', ['as' => 'admin.committees', 'uses' => 'AdminViewController@committees']);
-    Route::get('/courses', ['as' => 'admin.courses', 'uses' => 'AdminViewController@courses']);
-    Route::get('/projects', ['as' => 'admin.projects', 'uses' => 'AdminViewController@projects']);
+    Route::get('/awards', ['as' => 'manage.awards', 'uses' => 'AdminViewController@awards']);
+    Route::get('/committees', ['as' => 'manage.committees', 'uses' => 'AdminViewController@committees']);
+    Route::get('/courses', ['as' => 'manage.courses', 'uses' => 'AdminViewController@courses']);
+    Route::get('/projects', ['as' => 'manage.projects', 'uses' => 'AdminViewController@projects']);
 });

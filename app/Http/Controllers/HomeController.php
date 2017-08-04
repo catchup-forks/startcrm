@@ -31,7 +31,7 @@ class HomeController extends Controller
         $curr_comms = Auth::user()->currcomms;
         $curr_projs = Auth::user()->currprojs;
 
-        return view('portal.home')
+        return view('home')
             ->with('annoucements', $annoucements)
             ->with('profile', $profile)
             ->with('curr_comms', $curr_comms)
@@ -41,6 +41,6 @@ class HomeController extends Controller
     public function support()
     {
         Auth::user()->courses()->sync(\App\Course::pluck('id')->toArray());
-        return view('portal.support');
+        return view('support');
     }
 }

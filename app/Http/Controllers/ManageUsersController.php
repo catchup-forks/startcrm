@@ -28,13 +28,13 @@ class ManageUsersController extends Controller
             ->select('users.username', 'users.is_admin', 'profiles.fullname', 'ranks.title as rank')
             ->get();
 
-        return view('portal.admin.users.index')
+        return view('manage.users.index')
             ->with('users', $users);
     }
 
     public function adduser()
     {
-        return view('portal.admin.users.adduser');
+        return view('manage.users.adduser');
     }
 
     public function create(CreateUser $request) {
@@ -61,7 +61,7 @@ class ManageUsersController extends Controller
 
         \Session::flash('message', 'New user created successfully!');
         \Session::flash('class', 'success');
-        return redirect()->route('admin.users.adduser');
+        return redirect()->route('manage.users.adduser');
     }
 
 }

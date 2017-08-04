@@ -2,7 +2,7 @@
 @section('page_heading','Manage Users')
 @section('section')
 
-@include('portal.admin.users.tablinks')
+@include('manage.users.tablinks')
 
 <div class="col-xs-12">
     <table class="table table-hover">

@@ -22,7 +22,7 @@ class AnnoucementController extends Controller
 
     public function index()
     {
-        return view('portal.admin.annoucement');
+        return view('manage.annoucement');
     }
 
     public function create(AnnoucementRequest $request) {
@@ -35,7 +35,7 @@ class AnnoucementController extends Controller
 
         \Session::flash('message', 'Annoucement created successfully!');
         \Session::flash('class', 'success');
-        return redirect()->route('admin.annoucement');
+        return redirect()->route('manage.annoucement');
     }
 
 }

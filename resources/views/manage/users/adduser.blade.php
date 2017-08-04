@@ -2,13 +2,13 @@
 @section('page_heading','Manage Users')
 @section('section')
 
-@include('portal.admin.users.tablinks')
+@include('manage.users.tablinks')
 
 <div class="col-lg-7 col-xs-12">
     @section ('create_user_panel_title', 'Add User')
     @section ('create_user_panel_body')
 
-        {{ Form::open(['route' => 'admin.users.create', 'method' => 'post', 'class' => 'form-horizontal']) }}
+        {{ Form::open(['route' => 'manage.users.create', 'method' => 'post', 'class' => 'form-horizontal']) }}
         <?php $error_class = 'col-md-offset-3 col-md-9 col-sm-offset-4 col-sm-8'; ?>
         <div class="form-group">
             <label for="username" class="control-label col-md-3 col-sm-4">Username:</label>

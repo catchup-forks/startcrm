@@ -26,14 +26,14 @@ class UserController extends Controller
         $genders = \App\Gender::all();
         $ranks = \App\Rank::all();
 
-        return view('portal.user.profile')
+        return view('user.profile')
             ->with('profile', $profile)
             ->with('genders', $genders)
             ->with('ranks', $ranks);
     }
 
     public function settings() {
-        return view('portal.user.settings');
+        return view('user.settings');
     }
 
     public function changePassword(ChangePassword $request) {

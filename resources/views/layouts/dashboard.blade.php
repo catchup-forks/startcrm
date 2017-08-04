@@ -1,4 +1,4 @@
-@extends('layouts.plane')
+@extends('layouts.app')
 
 @section('body')
 <div id="wrapper">
@@ -72,23 +72,23 @@
                     <li >
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> Admin<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li {{ (Route::is('admin.annoucement') ? 'class=active' : '') }}>
-                                <a href="{{ route('admin.annoucement') }}">Manage Annoucements</a>
+                            <li {{ (Route::is('manage.annoucement') ? 'class=active' : '') }}>
+                                <a href="{{ route('manage.annoucement') }}">Manage Annoucements</a>
                             </li>
-                            <li {{ ((Route::getCurrentRoute()->getPrefix() === 'admin/users') ? 'class=active' : '') }}>
-                                <a href="{{ route('admin.users' ) }}">Manage Users</a>
+                            <li {{ ((Route::getCurrentRoute()->getPrefix() === 'manage/users') ? 'class=active' : '') }}>
+                                <a href="{{ route('manage.users' ) }}">Manage Users</a>
                             </li>
                             <li {{ (Route::is('admin.courses') ? 'class=active' : '') }}>
-                                <a href="{{ route('admin.courses') }}">Manage Courses</a>
+                                <a href="{{ route('manage.courses') }}">Manage Courses</a>
                             </li>
                             <li {{ (Route::is('admin.committees') ? 'class=active' : '') }}>
-                                <a href="{{ route('admin.committees') }}">Manage Committees</a>
+                                <a href="{{ route('manage.committees') }}">Manage Committees</a>
                             </li>
                             <li {{ (Route::is('admin.awards') ? 'class=active' : '') }}>
-                                <a href="{{ route('admin.awards') }}">Manage Awards</a>
+                                <a href="{{ route('manage.awards') }}">Manage Awards</a>
                             </li>
                             <li {{ (Route::is('admin.projects') ? 'class=active' : '') }}>
-                                <a href="{{ route('admin.projects') }}">Manage Projects</a>
+                                <a href="{{ route('manage.projects') }}">Manage Projects</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

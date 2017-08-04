@@ -11,7 +11,7 @@
     @section ('create_annoucement_panel_body')
     <div class="col-xs-12">
         <?php $error_class = 'col-lg-offset-1 col-lg-11 col-sm-offset-2 col-sm-10'; ?>
-        {{ Form::open(['route' => 'admin.annoucement.create', 'method' => 'post', 'class' => 'form-horizontal']) }}
+        {{ Form::open(['route' => 'manage.annoucement.create', 'method' => 'post', 'class' => 'form-horizontal']) }}
         <div class="form-group">
             <label for="title" class="control-label col-lg-1 col-sm-2">Title:</label>
             <div class="col-lg-11 col-sm-10 {{ $errors->has('title') ? 'has-error' : '' }}">

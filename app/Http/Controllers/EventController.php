@@ -16,10 +16,10 @@ class EventController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function journey()
     {
-        return view('portal.event.journey');
+        return view('event.journey');
     }
-    
+
 }

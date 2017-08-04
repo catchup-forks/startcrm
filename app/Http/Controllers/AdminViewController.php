@@ -17,30 +17,30 @@ class AdminViewController extends Controller
         $this->middleware('auth');
         $this->middleware('admin');
     }
-    
+
     public function awards()
     {
-        return view('portal.admin.awards');
+        return view('manage.awards');
     }
-    
+
     public function committees()
     {
-        return view('portal.admin.committees');
+        return view('manage.committees');
     }
-    
+
     public function courses()
     {
-        return view('portal.admin.courses');
+        return view('manage.courses');
     }
-    
+
     public function projects()
     {
-        return view('portal.admin.projects');
+        return view('manage.projects');
     }
-    
+
     public function users()
     {
-        return view('portal.admin.users');
+        return view('manage.users');
     }
-    
+
 }
