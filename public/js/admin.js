@@ -63,24 +63,10 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 45);
+/******/ 	return __webpack_require__(__webpack_require__.s = 40);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ 10:
-/***/ (function(module, exports, __webpack_require__) {
-
-// metisMenu
-__webpack_require__(39);
-
-// sb-admin-2
-__webpack_require__(36);
-
-// frontend
-__webpack_require__(35);
-
-/***/ }),
 
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
@@ -10343,7 +10329,7 @@ return jQuery;
 
 /***/ }),
 
-/***/ 35:
+/***/ 33:
 /***/ (function(module, exports) {
 
 var lineChartData = {
@@ -10435,58 +10421,9 @@ new Chart(cbar).Bar(bdata, {
     responsive: true
 });
 
-var podata = [{
-    value: 300,
-    color: "#F7464A",
-    highlight: "#FF5A5E",
-    label: "Red"
-}, {
-    value: 50,
-    color: "#46BFBD",
-    highlight: "#5AD3D1",
-    label: "Green"
-}, {
-    value: 100,
-    color: "#FDB45C",
-    highlight: "#FFC870",
-    label: "Yellow"
-}, {
-    value: 40,
-    color: "#949FB1",
-    highlight: "#A8B3C5",
-    label: "Grey"
-}, {
-    value: 120,
-    color: "#4D5360",
-    highlight: "#616774",
-    label: "Dark Grey"
-}];
-
-var cpolar = document.getElementById("cpolar").getContext("2d");
-new Chart(cpolar).PolarArea(podata, { responsive: true });
-
-var ddata1 = [{
-    value: 50,
-    color: "#F7464A",
-    highlight: "#FF5A5E",
-    label: "Red"
-}, {
-    value: 300,
-    color: "#46BFBD",
-    highlight: "#5AD3D1",
-    label: "Green"
-}, {
-    value: 160,
-    color: "#FDB45C",
-    highlight: "#FFC870",
-    label: "Yellow"
-}];
-var cdonut1 = document.getElementById("cdonut1").getContext("2d");
-new Chart(cdonut1).Doughnut(ddata1, { responsive: true });
-
 /***/ }),
 
-/***/ 36:
+/***/ 34:
 /***/ (function(module, exports) {
 
 $(function () {
@@ -10527,7 +10464,7 @@ $(function () {
 
 /***/ }),
 
-/***/ 39:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -10882,11 +10819,25 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 45:
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(10);
+module.exports = __webpack_require__(9);
 
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+// metisMenu
+__webpack_require__(37);
+
+// theme
+__webpack_require__(34);
+
+// frontend
+__webpack_require__(33);
 
 /***/ })
 
