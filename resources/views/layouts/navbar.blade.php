@@ -1,4 +1,4 @@
-@extends('layouts.plane')
+@extends('layouts.app')
 
 @section('body')
 <div id="wrapper">
@@ -19,4 +19,3 @@
     @yield('section')
 </div>
 @stop
-
