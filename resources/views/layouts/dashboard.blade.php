@@ -78,16 +78,16 @@
                             <li {{ ((Route::getCurrentRoute()->getPrefix() === 'manage/users') ? 'class=active' : '') }}>
                                 <a href="{{ route('manage.users' ) }}">Manage Users</a>
                             </li>
-                            <li {{ (Route::is('admin.courses') ? 'class=active' : '') }}>
+                            <li {{ (Route::is('manage.courses') ? 'class=active' : '') }}>
                                 <a href="{{ route('manage.courses') }}">Manage Courses</a>
                             </li>
-                            <li {{ (Route::is('admin.committees') ? 'class=active' : '') }}>
+                            <li {{ (Route::is('manage.committees') ? 'class=active' : '') }}>
                                 <a href="{{ route('manage.committees') }}">Manage Committees</a>
                             </li>
-                            <li {{ (Route::is('admin.awards') ? 'class=active' : '') }}>
+                            <li {{ (Route::is('manage.awards') ? 'class=active' : '') }}>
                                 <a href="{{ route('manage.awards') }}">Manage Awards</a>
                             </li>
-                            <li {{ (Route::is('admin.projects') ? 'class=active' : '') }}>
+                            <li {{ (Route::is('manage.projects') ? 'class=active' : '') }}>
                                 <a href="{{ route('manage.projects') }}">Manage Projects</a>
                             </li>
                         </ul>
