@@ -16,7 +16,7 @@ Route::post('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']
 
 // temp route to display theme pages, remember to delete before going live
 Route::get('/temp', function () {
-    return view('admin.panel');
+    return view('admin.typography');
 });
 
 Route::get('/', 'HomeController@index');
