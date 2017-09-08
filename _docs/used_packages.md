@@ -1,0 +1,28 @@
+  - Updating fzaninotto/faker (v1.6.0 => v1.7.1) Loading from cache
+  - Updating symfony/css-selector (v3.3.6 => v3.1.10) Loading from cache
+  - Updating symfony/polyfill-mbstring (v1.4.0 => v1.5.0) Loading from cache
+  - Updating symfony/var-dumper (v3.3.6 => v3.3.8) Loading from cache
+  - Updating doctrine/inflector (v1.1.0 => v1.2.0) Loading from cache
+  - Updating league/flysystem (1.0.40 => 1.0.41) Loading from cache
+  - Updating ramsey/uuid (3.6.1 => 3.7.0) Loading from cache
+  - Updating symfony/debug (v3.3.6 => v3.3.8) Loading from cache
+  - Updating symfony/console (v3.3.6 => v3.3.8) Loading from cache
+  - Updating symfony/finder (v3.3.6 => v3.3.8) Loading from cache
+  - Updating symfony/http-foundation (v3.3.6 => v3.3.8) Loading from cache
+  - Updating symfony/event-dispatcher (v3.3.6 => v3.3.8) Loading from cache
+  - Updating symfony/http-kernel (v3.3.6 => v3.3.8) Loading from cache
+  - Updating symfony/process (v3.3.6 => v3.3.8) Loading from cache
+  - Updating symfony/routing (v3.3.6 => v3.3.8) Loading from cache
+  - Updating phpdocumentor/reflection-docblock (3.2.0 => 4.1.1) Loading from cache
+  - Updating phpspec/prophecy (v1.7.0 => v1.7.2) Loading from cache
+  - Updating nikic/php-parser (v3.1.0 => v3.1.1) Loading from cache
+  - Updating symfony/translation (v3.3.6 => v3.3.8) Loading from cache
+  - Updating phpunit/php-token-stream (2.0.0 => 2.0.1) Loading from cache
+  - Updating symfony/yaml (v3.3.6 => v3.3.8) Loading from cache
+  - Updating laravel/framework (v5.4.32 => v5.4.36) Loading from cache
+  - Installing spatie/laravel-permission (2.5.3) Loading from cache
+  - Installing thomaswelton/gravatarlib (0.1.0) Loading from cache
+  - Installing thomaswelton/laravel-gravatar (1.1.2) Loading from cache
+  - Updating laravelcollective/html (v5.4.8 => v5.4.9) Loading from cache
+  - Installing watson/bootstrap-form (1.1.11) Loading from cache
+  - Installing symfony/dom-crawler (v3.1.10) Loading from cache
